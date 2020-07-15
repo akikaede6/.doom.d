@@ -65,3 +65,4 @@
               :internal-border-width 10))
   (setq default-input-method "rime"
         rime-show-candidate 'posframe))
+(setq doom-font (font-spec :family "Sarasa Term J" :size (if (> (x-display-pixel-width) 1600) 28 12) :weight 'semi-light))
