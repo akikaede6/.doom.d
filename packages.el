@@ -50,9 +50,18 @@
 ;(unpin! t)
 
 (package! posframe)
+
 (package! rime
   :recipe
   (
    :host github
    :repo "DogLooksGood/emacs-rime"
    :files ("*.el" "Makefile" "lib.c")))
+
+(package! eaf
+  :recipe
+  (
+   :host github
+   :repo "manateelazycat/emacs-application-framework"
+   :files ("*")
+   ))

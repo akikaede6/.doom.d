@@ -53,7 +53,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
+;;use rime
 (use-package! rime
   :config
   (setq rime-user-data-dir "~/.config/fcitx/rime")
@@ -65,4 +65,15 @@
               :internal-border-width 10))
   (setq default-input-method "rime"
         rime-show-candidate 'posframe))
-(setq doom-font (font-spec :family "Sarasa Term J" :size (if (> (x-display-pixel-width) 1600) 28 12) :weight 'semi-light))
+
+;;set font sarasa
+(setq doom-font (font-spec :family "Sarasa Term J" :size (if (> (x-display-pixel-width) 1600) 20 12) :weight 'semi-light))
+
+;;use eaf
+(use-package! eaf
+  :custom
+  (eaf-find-alternate-file-in-dired t)
+  :config
+  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+  (eaf-bind-key take_photo "p" eaf-camera-keybinding))
